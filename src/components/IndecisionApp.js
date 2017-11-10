@@ -4,6 +4,7 @@ import Action from './Action';
 import Header from './Header';
 import Options from './Options';
 import OptionModal from './OptionModal';
+import RiskChart from './RiskChart'
 
 export default class IndecisionApp extends React.Component {
   state = {
@@ -66,6 +67,7 @@ export default class IndecisionApp extends React.Component {
     return (
       <div>
         <Header subtitle={subtitle} />
+        <RiskChart />
         <Action
           hasOptions={this.state.options.length > 0}
           handlePick={this.handlePick}

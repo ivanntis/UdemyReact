@@ -11,7 +11,13 @@ module.exports = {
       loader: 'babel-loader',
       test: /\.js$/,
       exclude: /node_modules/
-    }, {
+    }, 
+    {
+        test: /\.js$/,
+        loader: 'ify-loader',
+        enforce: 'post'
+    },
+    {
       test: /\.s?css$/,
       use: [
         'style-loader',
